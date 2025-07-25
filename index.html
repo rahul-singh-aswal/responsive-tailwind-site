@@ -1,13 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page using TailwindCSS</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
-    <h1 class="text-amber-400 text-2xl">Hello World!</h1>
-    
-</body>
+    <link rel="stylesheet" href="output.css" />
+    <script
+      src="https://kit.fontawesome.com/dd9bd24a59.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <nav
+      class="px-6 py-3 flex bg-white justify-between items-center shadow-gray-200 shadow-sm"
+    >
+      <!-- logo -->
+
+      <a class="flex gap-2 items-center" href="#" id="brand">
+        <img
+          class="object max-w-14 max-h-14"
+          src="./assets/asset 0.png"
+          alt="logo"
+        />
+        <span class="text-2xl font-medium font-display">ToDesktop</span>
+      </a>
+
+      <!-- nav menu  -->
+
+      <div id="nav-menu" class="hidden lg:flex gap-8 text-xl font-bold">
+        <a class="hover:text-primary" href="#">Pricing</a>
+        <a class="hover:text-primary" href="#">Docs</a>
+        <a class="hover:text-primary" href="#">Changelog</a>
+        <a class="hover:text-primary" href="#">Blogs</a>
+        <a class="hover:text-primary" href="#">Login</a>
+      </div>
+
+      <!-- another button -->
+      <a
+        href="https://www.jenkins.io/download/"
+        class="hidden lg:flex gap-3 items-center text-lg font-bold px-4 py-2 border-2 rounded-lg border-gray-300 hover:border-gray-500 hover:shadow-sm"
+      >
+        <img class="w-6" src="./assets/asset 1.svg" alt="electron-logo" />
+        <span>Electron Developer</span>
+        <i class="fa-solid fa-arrow-right text-gray-500"></i>
+      </a>
+
+      <!-- menu button -->
+
+      <button class="p-2 lg:hidden flex items-center" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+
+      <!-- div for mobile menu -->
+      <div class="hidden fixed inset-0 bg-white" id="nav-dailog">
+        <!-- nav bar for small devices -->
+        <div
+          id="nav-bar"
+          class="flex items-center justify-between py-3 px-6 shadow-gray-200 shadow-sm"
+        >
+          <!-- logo -->
+
+          <a class="flex gap-2 items-center" href="#">
+            <img
+              class="object max-w-14 max-h-14"
+              src="./assets/asset 0.png"
+              alt="logo"
+            />
+            <span class="text-2xl font-medium font-display">ToDesktop</span>
+          </a>
+
+          <!-- menu toggle button -->
+
+          <button
+            class="p-2 lg:hidden flex justify-center items-center"
+            onclick="handleMenu()"
+          >
+            <i class="fa-solid fa-xmark text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- mobile nav menu options -->
+        <div class="mt-2">
+          <a
+            href="#"
+            class="m-3 p-3 block rounded-lg hover:bg-gray-100 font-bold text-xl"
+            >Pricing</a
+          >
+          <a
+            href="#"
+            class="m-3 p-3 block rounded-lg hover:bg-gray-100 font-bold text-xl"
+            >Docs</a
+          >
+          <a
+            href="#"
+            class="m-3 p-3 block rounded-lg hover:bg-gray-100 font-bold text-xl"
+            >Changelog</a
+          >
+          <a
+            href="#"
+            class="m-3 p-3 block rounded-lg hover:bg-gray-100 font-bold text-xl"
+            >Blog</a
+          >
+          <a
+            href="#"
+            class="m-3 p-3 block rounded-lg hover:bg-gray-100 font-bold text-xl"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="flex gap-2 m-3 p-3 rounded-lg hover:bg-gray-100 font-bold text-xl"
+          >
+            <img class="w-6" src="./assets/asset 1.svg" alt="electron-logo" />
+            Electron Developer
+          </a>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <script src="./script.js"></script>
 </html>
